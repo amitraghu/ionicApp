@@ -1,0 +1,37 @@
+<ion-grid>
+<!-- triggering event to fetch from add recipe  @output -->
+  <!-- <app-add-recipe (addRecipe)="onRecipeAdded($event)"></app-add-recipe> -->
+  <app-add-recipe ></app-add-recipe>
+
+  <ion-row>
+    <ion-col *ngFor = 'let item of recipes; index as i' size-xs='12' size-sm='6' size-md='6' size-lg='6' size-xl='6'>
+      
+      <!-- sending data to app-recipe-item component -->
+<!-- <app-recipe-item [recipeItem]= 'item' [index]='i'  (deleteRecipeItem)="deleteRecipe($event)"> -->
+  <!-- (selectedRecipe)="onSelectRecipe(item)" -->
+  <app-recipe-item [recipeItem]= 'item'  >
+  <ion-badge><ion-icon name = "trash" (click)= "deleteRecipe(i)"></ion-icon></ion-badge>
+</app-recipe-item>
+
+<!-- demo of use of ng-content selector -->
+<!-- <app-recipe-item >
+
+  <ion-card style="height:100%;">
+
+  <img alt={{item.name}} src={{item.imagePath}}>
+
+  <ion-card-header>
+    <ion-card-title>{{item.name}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>{{item.description}}</ion-card-content>
+
+  
+  <ion-badge><ion-icon name = "trash" (click)= "deleteRecipe(i)"></ion-icon></ion-badge>
+</ion-card>
+
+</app-recipe-item> -->
+</ion-col>
+</ion-row>
+
+</ion-grid>

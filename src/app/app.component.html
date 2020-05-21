@@ -1,0 +1,53 @@
+<!-- <app-header></app-header> -->
+<!-- <ion-app>
+  <ion-router-outlet></ion-router-outlet>
+<ion-card>
+ <app-recipes></app-recipes>
+<app-shopping-list></app-shopping-list> 
+</ion-card>
+</ion-app> -->
+
+<ion-app>
+  <app-header (selected)="onSelect($event)"></app-header>
+
+
+<ion-content>
+
+	<!-- <div class="ion-padding">
+		The world is your oyster.
+		<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+	</div> -->
+<!-- 
+	<ion-list>
+		<ion-item button *ngFor="let item of items" (click)="viewItem(item)">
+
+		</ion-item>
+	</ion-list> -->
+	<ion-grid>
+	<ion-row>
+		<ion-col  size='12' >
+			<!-- app unless is self made structural directive made by me which is equivalent to ngIf -->
+  <!-- <app-recipes *appUnless="selectedComponent === 'recipe'"></app-recipes>
+  <app-shopping-list *appUnless="selectedComponent !== 'recipe'"></app-shopping-list> -->
+  <router-outlet></router-outlet>
+  </ion-col>
+
+  <!-- actual behaviour of structural directive which uses property binding -->
+  <!-- <ion-col  size='12' >
+<ng-template [appUnless]="selectedComponent === 'recipe'">
+  <app-recipes ></app-recipes>
+</ng-template>
+<ng-template [appUnless]="selectedComponent !== 'recipe'">
+	<app-shopping-list></app-shopping-list>
+  </ng-template>
+</ion-col> -->
+  </ion-row> 
+
+  <!-- <ion-row>
+	  <p appFirstDirective>use of first directive</p>
+	  <p appRenderer [defaultColor]="'red'" [highlightColor]="'yellow'">use of renderer</p>
+  </ion-row> -->
+</ion-grid>
+
+</ion-content>
+</ion-app>

@@ -1,0 +1,26 @@
+<img alt={{currentRecipe.name}} src={{currentRecipe.imagePath}} style="height: 300px;">
+
+<ion-card-header>
+  <ion-card-title>{{currentRecipe.name}}</ion-card-title>
+</ion-card-header>
+
+<ion-card-content>{{currentRecipe.description}}</ion-card-content>
+
+<ion-row>
+<ion-col size-xs='8' size-sm='4' size-md='4' size-lg='4' size-xl='4' offset-sm='4' offset-md='4' offset-lg='4' offset-xl='4' >
+  <!-- <ion-label>Manage</ion-label> -->
+  <ion-select interface="popover" placeholder="Manage" (ionChange)="moveToShoppingList()"  >
+      <!-- <ion-select-option *ngFor="let item of currentRecipe.Ingredients">{{item.name}} </ion-select-option> -->
+      <ion-select-option>move to shopping list </ion-select-option>
+      </ion-select>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size-xs='8' size-sm='4' size-md='4' size-lg='4' size-xl='4' offset-sm='4' offset-md='4' offset-lg='4' offset-xl='4' >
+      <ion-label>Ingredients</ion-label>
+      <ion-item *ngFor="let item of currentRecipe.Ingredients" class='border'>
+        {{item.name}} - {{item.amount}}
+        </ion-item>
+      </ion-col>
+      </ion-row>

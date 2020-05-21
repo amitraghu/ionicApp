@@ -1,0 +1,32 @@
+<ion-grid>
+
+<!-- <app-shopping-edit (newIngredientEmit)="addToList($event)"></app-shopping-edit> -->
+<app-shopping-edit ></app-shopping-edit> 
+    <!-- <ion-row>
+        <ion-col size-xs='12' size-sm='4' size-md='4' size-lg='3' size-xl='3'>
+        <ion-card>
+         
+        <ion-input placeholder="Enter Name" [(ngModel)]="newIngredient.name" class="border"></ion-input>
+        <ion-input placeholder="Enter Amount" [(ngModel)]="newIngredient.amount"  class="border"></ion-input>
+        
+        <ion-button (click)="addToList()" >Add Item</ion-button>
+        </ion-card>
+        </ion-col>
+        </ion-row> -->
+        
+  
+<ion-row *ngFor="let item of ingredient; index as i"  >
+    <ion-col size-xs='12' size-sm='4' size-md='4' size-lg='3' size-xl='3'>
+        <ion-card>
+         
+         <div>
+                {{item.name}} - {{item.amount}}
+           </div>  
+           <div>  
+                <ion-badge><ion-icon name="trash" (click)="deleteFromList(i)"></ion-icon></ion-badge>
+                </div>
+        </ion-card>
+        </ion-col>
+
+</ion-row>
+</ion-grid>

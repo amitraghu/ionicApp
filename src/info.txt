@@ -1,0 +1,74 @@
+// This file contains important concepts that are implemented in this project
+
+ 1. Use of decorators to communicate between two components 
+   1.a: Input decorator // used to send data from recipe-list component to recipe-item component
+   1.b: Output decorator //used to send data from add-recipe component to recipe-list component using event
+
+2. Encapsulation of CSS //demo in recipe-list.component.ts file
+  
+3. Using local reference //demo in add-recipe.component.html file
+
+4. Two way binding using NgModel //demo in add-recipe.component.html file
+
+5. Use of @viewchild decorator to access local reference directly from .ts file without passing any parameter to function.
+//Demo in add-recipe.component.html and add-recipe-component.ts file
+
+6. Use of ng-content selector to send a part of html code to another component instead of using property binding, This works like hook
+//Demo in recipe-list-component.html and recipe-item-component.html
+
+7. Life cycle hooks(a function) in angular which runs automatically on the basis of its property
+   7.a: ngOnChanges - Called after a bound input property changes.
+   7.b: ngOnInIt -  Called once the component is initialized.
+   7.c: ngDoCheck - Called during every change detection run(runs on every change).
+   7.d: ngAfterContentInit - Called after content (ng-content) has been projected into view.
+   7.e: ngAfterContentChecked - Called after every time the projected content has been checked.
+   7.f: ngAfterViewInit - Called after the component's view(and child views) has been initialized.
+   7.g: ngAfterViewChecked - Called every time view(and child views) have been checked.
+   7.h: ngOnDestroy - Called once the component is about to be destroyed.
+
+
+8. You won't get value of local reference(using @viewchild) variable before execution of ngAfterViewInit.
+
+9. Similar to @viewchild there is one more decorator @contentchild to access content. 
+
+//demo in recipe-item-component.html
+10. ngClass and ngStyle to add CSS dynamically;
+
+//demo in app.component.html and first.directive.ts
+11. make your own directive
+
+//demo in app.component.html and renderer.directive.ts
+12. use of renderer instead of simple directive because simple directive doesn't work with all browsers.
+
+//demo in app.component.html and renderer.directive.ts
+13. use of decorator @HostListener and renderer to change background color dynamically.
+
+//demo in renderer.directive.ts and app.component.html
+14. use of decorator @HostBinding to change CSS properties of a element instead of renderer, Using @HostBinding is a better way.
+
+//demo in renderer.directive.ts and app.component.html
+15. making @HostBinding more dynamic by making use of custom property binding(@Input).
+
+//demo in unless.directive.ts and app.component.html
+16.Making your own structural directive.
+
+//demo in services folder (service is used to create a common instance of list to avoid event binding).
+//services create their own instance if defined in provider else they will use instance of parent component.
+17.use of services 
+
+//demo add-recipe.service.ts
+18. use injectable to use one service in another service.
+
+//demo in app.module.ts and app.component.html
+19.using router to switch between pages.
+
+//use of routerLink instead of href demo in header.component.html
+20. routerLink
+
+21.accessing path using routerLink
+"../somepath" go up one level
+"/somepath" absolute path
+"somepath" relative path
+
+//demo in home.page.html
+22. router.navigate()

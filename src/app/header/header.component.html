@@ -1,0 +1,35 @@
+<ion-header style="padding:5px">
+    <ion-grid>
+<ion-row>
+    <ion-col size-xs='6' size-sm='2' size-md='2' size-lg='2' size-xl='2'  >
+    <h4 ><a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact:true}">Recipe Book</a></h4>
+    </ion-col>
+    <!-- <ion-col size-xs='6' size-sm='2' size-md='2' size-lg='2' size-xl='2' >
+   
+        <div  (click)="onSelect('recipe')" style="cursor:pointer">Recipe List</div>
+    </ion-col>
+        <ion-col size-xs='6' size-sm='2' size-md='2' size-lg='2' size-xl='2' >
+        <div (click)="onSelect('shopping')" style="cursor:pointer">Shopping List</div>
+        </ion-col> -->
+
+        <ion-col size-xs='6' size-sm='2' size-md='2' size-lg='2' size-xl='2' offset="0" >
+           <a routerLinkActive="active" routerLink="/recipes">Recipe List</a>
+   
+            <!-- <div  href="" style="cursor:pointer">Recipe List</div> -->
+        </ion-col>
+            <ion-col size-xs='6' size-sm='2' size-md='2' size-lg='2' size-xl='2' >
+            <!-- <div href="/shoppingList" style="cursor:pointer">Shopping List</div> -->
+            <a  routerLinkActive="active" routerLink="/shoppingList">Shopping List</a>
+            </ion-col>
+    
+
+        <ion-col size-xs='6' size-sm='2' size-md='2' size-lg='2' size-xl='2' offset-sm='4' offset-md='4' offset-lg='4' offset-xl='4' >
+            <!-- <ion-label>Manage</ion-label> -->
+            <ion-select interface="popover" placeholder="Manage" >
+                <ion-select-option>option 1 </ion-select-option>
+                <ion-select-option>option 2 </ion-select-option>
+                </ion-select>
+            </ion-col>
+</ion-row>
+    </ion-grid>
+</ion-header>

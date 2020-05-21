@@ -1,0 +1,26 @@
+<ion-row>
+<ion-col size-xs='12' size-sm='8' size-md='8' size-lg='8' size-xl='8'>
+<ion-card>
+    <!-- ngModel is used for two way binding -->
+<!-- <ion-input placeholder="Enter Name" [(ngModel)]="newRecipe.name" class="border"></ion-input> -->
+
+<!-- using local reference instead of two way binding -->
+<!-- <ion-input placeholder="Enter Name"  #recipeName class="border"></ion-input> -->
+
+<!-- using local reference for @viewchild decorator -->
+<ion-input placeholder="Enter Name"  #recipeName class="border"></ion-input>
+<ion-input placeholder="Enter Description" [(ngModel)]="newRecipe.description " class="border"></ion-input>
+<ion-input placeholder="Paste Image URL" [(ngModel)]="newRecipe.imagePath" class="border"></ion-input>
+
+<!-- for two way binding -->
+<!-- <ion-button (click)="onAddRecipe()">Add Recipe</ion-button> -->
+
+<!-- for local reference -->
+<!-- <ion-button (click)="onAddRecipe(recipeName)">Add Recipe</ion-button> -->
+
+<!-- for local reference with decorator -->
+<ion-button (click)="onAddRecipe()">Add Recipe</ion-button>
+</ion-card>
+</ion-col>
+</ion-row>
+

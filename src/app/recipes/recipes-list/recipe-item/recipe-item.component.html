@@ -1,0 +1,18 @@
+<!-- used for property binding -->
+<ion-card style="height:100%;" (click)="onSelect()" >
+    
+   <img alt={{recipe.name}} src={{recipe.imagePath}}>
+
+  <ion-card-header>
+    <ion-card-title [ngStyle]="{backgroundColor:getColor()}">{{recipe.name}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content >{{recipe.description}}</ion-card-content>
+
+  <!-- <ion-badge><ion-icon name = "trash" (click)= "deleteRecipe(i)"></ion-icon></ion-badge> -->
+  <ng-content></ng-content> 
+
+</ion-card> 
+
+
+<!-- <ng-content></ng-content> -->
